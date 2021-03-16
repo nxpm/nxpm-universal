@@ -45,7 +45,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forRoot(routes, { paramsInheritanceStrategy: 'always' }),
+    RouterModule.forRoot(routes, { paramsInheritanceStrategy: 'always', initialNavigation: 'enabled' }),
     WebAuthDataAccessModule,
   ],
 })

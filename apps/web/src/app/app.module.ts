@@ -8,7 +8,12 @@ import { AppComponent } from './app.component'
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, RouterModule, WebCoreFeatureModule, WebShellFeatureModule],
+  imports: [
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    RouterModule,
+    WebCoreFeatureModule,
+    WebShellFeatureModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

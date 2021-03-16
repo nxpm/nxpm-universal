@@ -962,7 +962,7 @@
         "build": {
           "executor": "@angular-builders/custom-webpack:browser",
           "options": {
-            "outputPath": "dist/apps/web",
+            "outputPath": "dist/web/browser",
             "index": "apps/web/src/index.html",
             "main": "apps/web/src/main.ts",
             "polyfills": "apps/web/src/polyfills.ts",
@@ -1047,6 +1047,51 @@
           "options": {
             "jestConfig": "apps/web/jest.config.js",
             "passWithNoTests": true
+          }
+        },
+        "server": {
+          "executor": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/web/server",
+            "main": "apps/web/server.ts",
+            "tsConfig": "apps/web/tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "libs/web/core/feature/src/environments/environment.ts",
+                  "with": "libs/web/core/feature/src/environments/environment.prod.ts"
+                }
+              ],
+              "sourceMap": false,
+              "optimization": true
+            }
+          }
+        },
+        "serve-ssr": {
+          "executor": "@nguniversal/builders:ssr-dev-server",
+          "options": {
+            "browserTarget": "web:build",
+            "serverTarget": "web:server"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "web:build:production",
+              "serverTarget": "web:server:production"
+            }
+          }
+        },
+        "prerender": {
+          "executor": "@nguniversal/builders:prerender",
+          "options": {
+            "browserTarget": "web:build:production",
+            "serverTarget": "web:server:production",
+            "routes": ["/"]
+          },
+          "configurations": {
+            "production": {}
           }
         }
       }
