@@ -1,0 +1,19 @@
+import { Component } from '@angular/core'
+
+
+@Component({
+  selector: '<%= fileName %>',
+  template: `
+    <ng-container>
+      <div class="flex p-4 shadow rounded-lg bg-gray-100 dark:bg-gray-800">
+        <code><%= fileName %></code>
+      </div>
+      <code class="text-xs px-2 py-1 dark:bg-gray-800 rounded-md opacity-70">
+        Component: <%= target %>/<%= fileName %>/<%= fileName %>.component.ts
+      </code>
+    </ng-container>
+  `,
+})
+export class <%= className %>Component {
+
+}

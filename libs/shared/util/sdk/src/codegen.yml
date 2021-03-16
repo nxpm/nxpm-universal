@@ -1,0 +1,19 @@
+overwrite: true
+schema: 'api-schema.graphql'
+documents:
+  - 'libs/shared/util/sdk/src/graphql/**/*.graphql'
+generates:
+  libs/shared/util/sdk/src/generated/graphql.ts:
+    config:
+      sdkClass: true
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-apollo-angular'
+  ./graphql.schema.json:
+    plugins:
+      - 'introspection'
+
+hooks:
+  afterAllFileWrite:
+    - prettier --write

@@ -1,0 +1,6 @@
+export * from './lib/api-auth-data-access.module'
+export * from './lib/api-auth-data-access.service'
+export * from './lib/dto/jwt.dto'
+export * from './lib/dto/login.input'
+export * from './lib/dto/register.input'
+export * from './lib/models/auth-token.model'

@@ -1,7 +1,7 @@
 {
   "npmScope": "nxpm-universal",
   "affected": {
-    "defaultBase": "master"
+    "defaultBase": "main"
   },
   "implicitDependencies": {
     "workspace.json": "*",
@@ -22,5 +22,210 @@
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "api": {
+      "tags": []
+    },
+    "api-account-data-access": {
+      "tags": ["scope:api", "type:data-access"]
+    },
+    "api-account-feature": {
+      "tags": ["scope:api", "type:feature"]
+    },
+    "api-auth-data-access": {
+      "tags": ["scope:api", "type:data-access"]
+    },
+    "api-auth-feature": {
+      "tags": ["scope:api", "type:feature"]
+    },
+    "api-auth-util": {
+      "tags": ["scope:api", "type:util"]
+    },
+    "api-core-data-access": {
+      "tags": ["scope:api", "type:data-access"]
+    },
+    "api-core-feature": {
+      "tags": ["scope:api", "type:feature"]
+    },
+    "api-core-util": {
+      "tags": ["scope:api", "type:util"]
+    },
+    "api-e2e": {
+      "tags": []
+    },
+    "api-user-data-access": {
+      "tags": ["scope:api", "type:data-access"]
+    },
+    "api-user-feature": {
+      "tags": ["scope:api", "type:feature"]
+    },
+    "mobile": {
+      "tags": []
+    },
+    "mobile-about-feature": {
+      "tags": ["scope:mobile", "type:feature"]
+    },
+    "mobile-account-feature": {
+      "tags": ["scope:mobile", "type:feature"]
+    },
+    "mobile-account-ui": {
+      "tags": ["scope:mobile", "type:ui"]
+    },
+    "mobile-assets": {
+      "tags": ["scope:mobile", "type:assets"]
+    },
+    "mobile-auth-data-access": {
+      "tags": ["scope:mobile", "type:data-access"]
+    },
+    "mobile-auth-feature": {
+      "tags": ["scope:mobile", "type:feature"]
+    },
+    "mobile-auth-ui": {
+      "tags": ["scope:mobile", "type:ui"]
+    },
+    "mobile-core-data-access": {
+      "tags": ["scope:mobile", "type:data-access"]
+    },
+    "mobile-core-feature": {
+      "tags": ["scope:mobile", "type:feature"]
+    },
+    "mobile-dashboard-feature": {
+      "tags": ["scope:mobile", "type:feature"]
+    },
+    "mobile-e2e": {
+      "tags": [],
+      "implicitDependencies": ["mobile"]
+    },
+    "mobile-layout-feature": {
+      "tags": ["scope:mobile", "type:feature"]
+    },
+    "mobile-shell-feature": {
+      "tags": ["scope:mobile", "type:feature"]
+    },
+    "mobile-style": {
+      "tags": ["scope:mobile", "type:style"]
+    },
+    "mobile-ui-button": {
+      "tags": ["scope:mobile", "type:ui"]
+    },
+    "mobile-ui-form": {
+      "tags": ["scope:mobile", "type:ui"]
+    },
+    "mobile-ui-icon": {
+      "tags": ["scope:mobile", "type:ui"]
+    },
+    "mobile-ui-loader": {
+      "tags": ["scope:mobile", "type:ui"]
+    },
+    "mobile-ui-page": {
+      "tags": ["scope:mobile", "type:ui"]
+    },
+    "mobile-ui-page-header": {
+      "tags": ["scope:mobile", "type:ui"]
+    },
+    "mobile-ui-sidebar-page": {
+      "tags": ["scope:mobile", "type:ui"]
+    },
+    "mobile-ui-table": {
+      "tags": ["scope:mobile", "type:ui"]
+    },
+    "shared-util-sdk": {
+      "tags": ["scope:shared", "type:util"]
+    },
+    "web": {
+      "tags": []
+    },
+    "web-about-feature": {
+      "tags": ["scope:web", "type:feature"]
+    },
+    "web-account-feature": {
+      "tags": ["scope:web", "type:feature"]
+    },
+    "web-account-ui": {
+      "tags": ["scope:web", "type:ui"]
+    },
+    "web-admin-feature": {
+      "tags": ["scope:web", "type:feature"]
+    },
+    "web-admin-ui": {
+      "tags": ["scope:web", "type:ui"]
+    },
+    "web-assets": {
+      "tags": ["scope:web", "type:assets"]
+    },
+    "web-auth-data-access": {
+      "tags": ["scope:web", "type:data-access"]
+    },
+    "web-auth-feature": {
+      "tags": ["scope:web", "type:feature"]
+    },
+    "web-auth-ui": {
+      "tags": ["scope:web", "type:ui"]
+    },
+    "web-core-data-access": {
+      "tags": ["scope:web", "type:data-access"]
+    },
+    "web-core-feature": {
+      "tags": ["scope:web", "type:feature"]
+    },
+    "web-dashboard-feature": {
+      "tags": ["scope:web", "type:feature"]
+    },
+    "web-e2e": {
+      "tags": [],
+      "implicitDependencies": ["web"]
+    },
+    "web-layout": {
+      "tags": ["scope:web", "type:layout"]
+    },
+    "web-shell-feature": {
+      "tags": ["scope:web", "type:feature"]
+    },
+    "web-style": {
+      "tags": ["scope:web", "type:style"]
+    },
+    "web-ui-button": {
+      "tags": ["scope:web", "type:ui"]
+    },
+    "web-ui-form": {
+      "tags": ["scope:web", "type:ui"]
+    },
+    "web-ui-icon": {
+      "tags": ["scope:web", "type:ui"]
+    },
+    "web-ui-loader": {
+      "tags": ["scope:web", "type:ui"]
+    },
+    "web-ui-page": {
+      "tags": ["scope:web", "type:ui"]
+    },
+    "web-ui-page-header": {
+      "tags": ["scope:web", "type:ui"]
+    },
+    "web-ui-sidebar-page": {
+      "tags": ["scope:web", "type:ui"]
+    },
+    "web-ui-table": {
+      "tags": ["scope:web", "type:ui"]
+    },
+    "web-ui-toast": {
+      "tags": ["scope:web", "type:ui"]
+    }
+  },
+  "plugins": {
+    "@nxpm/stack": {
+      "api": {
+        "tech": "@nrwl/nest",
+        "project": "api"
+      },
+      "mobile": {
+        "tech": "@nxtend/ionic-angular",
+        "project": "mobile"
+      },
+      "web": {
+        "tech": "@nrwl/angular",
+        "project": "web"
+      }
+    }
+  }
 }

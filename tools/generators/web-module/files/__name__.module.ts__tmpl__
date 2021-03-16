@@ -1,0 +1,10 @@
+import { CommonModule } from '@angular/common'
+import { NgModule } from '@angular/core'
+import { RouterModule } from '@angular/router'
+import { <%= className %>Component } from './<%= fileName %>.component'
+
+@NgModule({
+  declarations: [<%= className %>Component],
+  imports: [CommonModule, RouterModule.forChild([{ path: '', component: <%= className %>Component }])],
+})
+export class <%= className %>Module {}

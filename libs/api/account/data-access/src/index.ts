@@ -1,0 +1,5 @@
+export * from './lib/api-account-data-access.module'
+export * from './lib/api-account-data-access.service'
+export * from './lib/dto/account-create-email.input'
+export * from './lib/dto/account-update-password.input'
+export * from './lib/dto/account-update-profile.input'

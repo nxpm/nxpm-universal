@@ -1,0 +1,6 @@
+{
+  "name": "mobile",
+  "devDependencies": {
+    "@capacitor/cli": "^2.4.5"
+  }
+}
