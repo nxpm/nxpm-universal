@@ -6064,7 +6064,7 @@ convert-source-map@^0.3.3:
   resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-0.3.5.tgz#f1d802950af7dd2631a1febe0596550c86ab3190"
   integrity sha1-8dgClQr33SYxof6+BZZVDIarMZA=
 
-cookie-parser@1.4.5:
+cookie-parser@^1.4.5:
   version "1.4.5"
   resolved "https://registry.yarnpkg.com/cookie-parser/-/cookie-parser-1.4.5.tgz#3e572d4b7c0c80f9c61daf604e4336831b5d1d49"
   integrity sha512-f13bPUj/gG/5mDr+xLmSxxDsB9DQiTIfhJS/sqjrmfAWiAN+x2O4i/XguTL9yDZ+/IFDanJ+5x7hC4CXT9Tdzw==
@@ -11193,6 +11193,20 @@ next-tick@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
+
+ngx-cookie-backend@^5.0.2:
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/ngx-cookie-backend/-/ngx-cookie-backend-5.0.2.tgz#313ebd06680113c31b4551af83eb2f9e9f3806d9"
+  integrity sha512-OJ81lgV6eTbDDZmI61G+41/VOt54iI7E+TSv3o/PefNpEl1aJqT4K36RgMF7Wu1Wnf33vMaQB5uk66EqYATu4w==
+  dependencies:
+    tslib "^2.0.0"
+
+ngx-cookie@^5.0.2:
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/ngx-cookie/-/ngx-cookie-5.0.2.tgz#cb658180b786d511d0ef163cfe195061d0a0e0e1"
+  integrity sha512-auivWhAhC5bW1HssvtQild1TREHWb1JtcKO0e+VGe9T7LHrfi5w2qcP8C58ly64PT+brZHQBvT1Azb7a6goHZA==
+  dependencies:
+    tslib "^2.0.0"
 
 nice-try@^1.0.4:
   version "1.0.5"

@@ -34,7 +34,10 @@ export class WebAuthStore extends ComponentStore<WebAuthDataAccessState> {
       switchMap(() =>
         this.data.me().pipe(
           tapResponse(
-            (res) => this.setState({ user: res.data.me }),
+            (res) => {
+              console.log('me', res)
+              this.setState({ user: res.data.me })
+            },
             () => this.setState({ errors: null }),
           ),
         ),
@@ -48,6 +51,7 @@ export class WebAuthStore extends ComponentStore<WebAuthDataAccessState> {
         this.data.me().pipe(
           tapResponse(
             (res) => {
+              console.log('Me', res)
               this.setState({ user: res.data.me, errors: res.errors })
               this.router.navigate(['/'])
             },

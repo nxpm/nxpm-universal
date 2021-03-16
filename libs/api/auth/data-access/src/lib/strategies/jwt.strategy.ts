@@ -10,11 +10,13 @@ function headerAndCookieExtractor(req: Request) {
   if (!token) {
     return cookieExtractor(req)
   }
+  console.log('header token', token)
   return token
 }
 
 function cookieExtractor(req: Request) {
   const name = process.env.API_COOKIE_NAME || '__session'
+  console.log('req?.cookies', req?.cookies)
   return req?.cookies?.[name] ? req.cookies[name] : undefined
 }
 
@@ -22,7 +24,7 @@ function cookieExtractor(req: Request) {
 export class JwtStrategy extends PassportStrategy(Strategy) {
   constructor(private readonly auth: ApiAuthDataAccessService) {
     super({
-      jwtFromRequest: cookieExtractor,
+      jwtFromRequest: headerAndCookieExtractor,
       secretOrKey: process.env.JWT_SECRET,
     })
   }

@@ -9,7 +9,7 @@ export const configuration = () => ({
       name: process.env.API_COOKIE_NAME,
       options: {
         domain: process.env.API_COOKIE_DOMAIN,
-        httpOnly: true,
+        httpOnly: false,
       },
     },
     cors: {

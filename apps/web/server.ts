@@ -1,9 +1,10 @@
 import { APP_BASE_HREF } from '@angular/common'
 import { ngExpressEngine } from '@nguniversal/express-engine'
+import { REQUEST, RESPONSE } from '@nguniversal/express-engine/tokens'
 import { config } from 'dotenv'
 import * as express from 'express'
 import { existsSync } from 'fs'
-import * as httpProxy from 'http-proxy'
+import * as cookieParser from 'cookie-parser'
 import { join } from 'path'
 import 'zone.js/dist/zone-node'
 
@@ -18,16 +19,7 @@ export function app(): express.Express {
   const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index'
 
   server.use(express.json())
-
-  // const apiProxy = httpProxy.createProxyServer()
-  // const config = { target: process.env.API_URL, secure: false }
-  // console.log(config)
-  // server.all('/api/**', (req, res) => {
-  //   apiProxy.web(req, res, config)
-  // })
-  // server.all('/graphql', (req, res) => {
-  //   apiProxy.web(req, res, config)
-  // })
+  server.use(cookieParser())
 
   // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
   server.engine(
@@ -52,7 +44,15 @@ export function app(): express.Express {
 
   // All regular routes use the Universal engine
   server.get('*', (req, res) => {
-    res.render(indexHtml, { req, providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }] })
+    console.log('req.cookies', req.cookies)
+    res.render(indexHtml, {
+      req,
+      providers: [
+        { provide: APP_BASE_HREF, useValue: req.baseUrl },
+        { provide: REQUEST, useValue: req },
+        { provide: RESPONSE, useValue: res },
+      ],
+    })
   })
 
   return server

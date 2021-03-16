@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core'
 import { RouterModule } from '@angular/router'
 import { WebCoreFeatureModule } from '@nxpm-universal/web/core/feature'
 import { WebShellFeatureModule } from '@nxpm-universal/web/shell/feature'
+import { CookieModule } from 'ngx-cookie'
 
 import { AppComponent } from './app.component'
 
@@ -10,6 +11,7 @@ import { AppComponent } from './app.component'
   declarations: [AppComponent],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    CookieModule.forRoot(),
     RouterModule,
     WebCoreFeatureModule,
     WebShellFeatureModule,
