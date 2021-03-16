@@ -13,7 +13,7 @@ export const configuration = () => ({
       },
     },
     cors: {
-      origin: [process.env.WEB_URL],
+      origin: [process.env.API_URL, process.env.WEB_URL],
     },
   },
 })
