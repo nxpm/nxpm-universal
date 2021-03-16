@@ -1,6 +1,6 @@
-# Web
+# nxpm-universal
 
-This project was generated using [@nxpm/stack](https://github.com/nxpm/stack) which is based on [Nx](https://nx.dev).
+This is a demo of running [nxpm-stack](https://github.com/nxpm/stack) with Angular Universal and authenticated SSR requests.
 
 <p align="center"><img src="https://avatars.githubusercontent.com/u/65322676?v=4" width="450"></p>
 

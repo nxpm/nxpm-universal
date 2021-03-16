@@ -41,7 +41,6 @@ export class IsLoggedInGuard implements CanActivate, CanActivateChild, CanLoad {
         return of(false)
       }),
       map((loggedIn: boolean) => {
-        console.log('isAuthenticated', url, loggedIn)
         if (!loggedIn) {
           return this.router.createUrlTree(['/login'], {
             queryParams: { url },

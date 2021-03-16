@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser'
+import { BrowserModule, BrowserTransferStateModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
 import { RouterModule } from '@angular/router'
 import { WebCoreFeatureModule } from '@nxpm-universal/web/core/feature'
@@ -11,6 +11,7 @@ import { AppComponent } from './app.component'
   declarations: [AppComponent],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserTransferStateModule,
     CookieModule.forRoot(),
     RouterModule,
     WebCoreFeatureModule,

@@ -10,13 +10,11 @@ function headerAndCookieExtractor(req: Request) {
   if (!token) {
     return cookieExtractor(req)
   }
-  console.log('header token', token)
   return token
 }
 
 function cookieExtractor(req: Request) {
   const name = process.env.API_COOKIE_NAME || '__session'
-  console.log('req?.cookies', req?.cookies)
   return req?.cookies?.[name] ? req.cookies[name] : undefined
 }
 
